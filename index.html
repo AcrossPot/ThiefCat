@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="AcrossPot">
+    <meta name="copyright" content="© 2025 AcrossPot All rights reserved.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/images/ThiefCat.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/ThiefCat.ico" type="image/x-icon">
+
+    <title>ふとめのネコグルメ</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="960" height="720"></canvas>
+
+        <div id="ui-overlay">
+            </div>
+
+        <div id="start-screen" class="game-screen active">
+            <h1>ふとめネコのグルメ</h1>
+            <button id="startButton">
+                <img src="assets/images/start.png" alt="スタートボタン">
+                </button>
+        </div>
+
+        <div id="countdown-screen" class="game-screen">
+            <div id="countdown-paws">
+                <img src="assets/images/count.png" alt="肉球" class="paw-img">
+                <img src="assets/images/count.png" alt="肉球" class="paw-img">
+                <img src="assets/images/count.png" alt="肉球" class="paw-img">
+            </div>
+            <p id="countdown-text"></p>
+        </div>
+
+        <div id="game-over-screen" class="game-screen">
+            <img id="mom-img" src="assets/images/mom.png" alt="家主">
+            <h1>こらー！</h1>
+            <button id="restartButton">ゲームオーバー<br>もう一度あそぶ</button>
+        </div>
+
+        <div id="game-clear-screen" class="game-screen">
+            <img id="manzoku-cat-img" src="" alt="満足な猫"> <h1>ごちそうさまでした</h1>
+            <p id="final-score"></p>
+            <button id="clearRestartButton">もう一度あそぶ</button>
+        </div>
+    </div>
+
+    <div id="external-ui">
+        <div id="top-ui-section">
+            <div id="current-score-display">
+                <h3>～～ 現在のスコア ～～<br>
+                    <span id="current-score-value">0</span>
+                    <br></h3>
+            </div>
+            <div id="mute-button-container">
+                <button id="muteButton">BGM: ON</button>
+            </div>
+        </div>
+
+        <div id="high-score">
+            <h3>ハイスコア (TOP 5)</h3>
+            <ul id="score-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
